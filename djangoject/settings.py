@@ -25,7 +25,7 @@ SECRET_KEY = 'rp^529&1%^s-8t*9jty*^t#$y164j3$x*q2j%dm!1f5m1(xr-6'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [‘0.0.0.0’, ‘localhost’, 'fierce-brook-69212.herokuapp.com']
+ALLOWED_HOSTS = ['0.0.0.0', 'localhost', 'fierce-brook-69212.herokuapp.com']
 
 
 # Application definition
