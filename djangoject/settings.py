@@ -21,10 +21,11 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/2.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'rp^529&1%^s-8t*9jty*^t#$y164j3$x*q2j%dm!1f5m1(xr-6'
+SECRET_KEY = get_env_variable('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
+GROKOKO_DB_PASS = get_env_variable('GROKOKO_DB_PASS')
 
 ALLOWED_HOSTS = ['0.0.0.0', 'localhost', 'fierce-brook-69212.herokuapp.com']
 
@@ -78,8 +79,12 @@ WSGI_APPLICATION = 'djangoject.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'grokoko_db',
+        'USER': 'grokoko',
+        'PASSWORD': GROKOKO_DB_PASS,
+        'HOST': 'localhost',
+        'PORT': '5432',
     }
 }
 
