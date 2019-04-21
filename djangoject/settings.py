@@ -81,8 +81,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'grokoko_db',
-        'USER': 'grokoko',
-        'PASSWORD': GROKOKO_DB_PASS,
+        'USER': 'postgres',
+        'PASSWORD': 'test',
         'HOST': 'localhost',
         'PORT': '5432',
     }
